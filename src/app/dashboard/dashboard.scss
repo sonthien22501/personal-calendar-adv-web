@@ -1,0 +1,16 @@
+.dashboard-wrapper {
+    border: 2px dashed #3f51b5; /* Angular Blue */
+    padding: 20px;
+    background-color: #e8eaf6;
+    border-radius: 8px;
+
+    h2 { margin-top: 0; color: #3f51b5; }
+    
+    .placeholder-box {
+        background: white;
+        padding: 15px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        color: #888;
+    }
+}
