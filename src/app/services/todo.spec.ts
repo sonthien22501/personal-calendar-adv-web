@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
+import { provideZonelessChangeDetection } from '@angular/core';
 import { TodoService } from './todo';
 
 describe('TodoService', () => {
@@ -10,6 +10,8 @@ describe('TodoService', () => {
       // providers: [TodoService] is optional here because we used 
       // @Injectable({ providedIn: 'root' }) in the service itself,
       // but it doesn't hurt to be explicit in tests.
+    providers: [provideZonelessChangeDetection()]
+
     });
     service = TestBed.inject(TodoService);
   });

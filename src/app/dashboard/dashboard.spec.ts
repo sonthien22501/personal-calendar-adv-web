@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Dashboard } from './dashboard';
 import { TodoService } from '../services/todo';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Dashboard', () => {
   let component: Dashboard;
@@ -10,7 +11,7 @@ describe('Dashboard', () => {
     await TestBed.configureTestingModule({
       declarations: [Dashboard],
       // We must provide the service here so the test injector knows how to create it
-      providers: [TodoService] 
+      providers: [TodoService, provideZonelessChangeDetection()],
     })
     .compileComponents();
 
