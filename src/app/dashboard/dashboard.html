@@ -5,7 +5,21 @@
     <div class="placeholder-box">
         [ Calendar will go here ]
     </div>
+
+    <!-- Updated Tasks Section -->
     <div class="placeholder-box">
-        [ Tasks will go here ]
+        <h3>My Tasks</h3>
+        <ul>
+            <!-- Using new Angular Control Flow (Slide 103) -->
+            @for (task of tasks; track task.id) {
+                <li>
+                    <!-- Simple binding to show status -->
+                    <input type="checkbox" [checked]="task.isDone" disabled>
+                    {{ task.title }}
+                </li>
+            } @empty {
+                <li>No tasks found.</li>
+            }
+        </ul>
     </div>
 </div>
