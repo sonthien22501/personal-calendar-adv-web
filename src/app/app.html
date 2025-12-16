@@ -1,5 +1,14 @@
-<div style="text-align:center; padding: 20px;">
+<div class="app-container">
   <h1>Personal Calendar App</h1>
-</div>
 
-<app-dashboard></app-dashboard>
+  <nav class="main-nav">
+    <a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+    <a routerLink="/todo" routerLinkActive="active-link">My Tasks</a>
+  </nav>
+
+  <hr>
+
+  <div class="content-area">
+    <router-outlet></router-outlet>
+  </div>
+</div>

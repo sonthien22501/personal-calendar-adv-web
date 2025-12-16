@@ -1,1 +1,1 @@
-["^ ","~:members",["^ ","getUpperBounds",["~#set",[["^ ","~:flags",["^2",["~:method"]]]]],"getLowerBounds",["^2",[["^ ","^3",["^2",["^4"]]]]]]]
+["^ ","~:members",["^ ","getUpperBounds",["~#set",[["^ ","~:flags",["^2",["~:method","~:public"]]]]],"getLowerBounds",["^2",[["^ ","^3",["^2",["^4","^5"]]]]]]]

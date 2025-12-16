@@ -1,0 +1,10 @@
+<div class="todo-wrapper">
+  <h2>My Task List</h2>
+  <ul>
+    <li *ngFor="let t of tasks">
+      <span *ngIf="t.isDone">✅</span> 
+      <span *ngIf="!t.isDone">⬜</span>
+      {{ t.title }}
+    </li>
+  </ul>
+</div>

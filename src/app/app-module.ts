@@ -1,24 +1,24 @@
-import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing-module';
-import { App } from './app';
+// FIX: Import 'App' from './app' (matching your file name and class name)
+import { App } from './app'; 
 import { Dashboard } from './dashboard/dashboard';
+import { Todo } from './todo/todo'; 
 
 @NgModule({
   declarations: [
-    App,
-    Dashboard
+    App,       // FIX: Use 'App' here
+    Dashboard,
+    Todo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule // Ensure this is here
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [App]
+  providers: [provideZonelessChangeDetection()],
+  bootstrap: [App] // FIX: Bootstrapping 'App'
 })
 export class AppModule { }

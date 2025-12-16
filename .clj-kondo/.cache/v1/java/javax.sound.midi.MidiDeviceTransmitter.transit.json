@@ -1,1 +1,1 @@
-["^ ","~:members",["^ ","getMidiDevice",["~#set",[["^ ","~:flags",["^2",["~:method"]]]]]]]
+["^ ","~:members",["^ ","getMidiDevice",["~#set",[["^ ","~:flags",["^2",["~:method","~:public"]]]]]]]
