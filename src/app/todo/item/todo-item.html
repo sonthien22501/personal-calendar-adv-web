@@ -1,0 +1,17 @@
+<div class="item-card" [class.event-card]="item.type === 'event'">
+  
+  <div *ngIf="item.type === 'event'" class="icon-area">
+    📅
+  </div>
+
+  <div *ngIf="item.type !== 'event'" class="icon-area">
+    <span *ngIf="item.isDone">✅</span>
+    <span *ngIf="!item.isDone">⬜</span>
+  </div>
+
+  <div class="content">
+    <strong>{{ item.title }}</strong>
+    <small>({{ item.type }})</small>
+  </div>
+
+</div>

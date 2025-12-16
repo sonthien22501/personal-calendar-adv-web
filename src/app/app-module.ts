@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { provideZonelessChangeDetection } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing-module';
-// FIX: Import 'App' from './app' (matching your file name and class name)
 import { App } from './app'; 
 import { Dashboard } from './dashboard/dashboard';
 import { Todo } from './todo/todo'; 
-
+import { TodoItemComponent } from './todo/item/todo-item';
+import { Login } from './login/login';
 @NgModule({
   declarations: [
-    App,       // FIX: Use 'App' here
+    App,
     Dashboard,
-    Todo
+    Todo,
+    TodoItemComponent,
+    Login
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Ensure this is here
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [provideZonelessChangeDetection()],
   bootstrap: [App] // FIX: Bootstrapping 'App'

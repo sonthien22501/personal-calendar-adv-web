@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Import your specific classes
 import { Dashboard } from './dashboard/dashboard';
 import { Todo } from './todo/todo';
+import { Login } from './login/login';
 
 const routes: Routes = [
   // Default redirect
@@ -13,7 +14,10 @@ const routes: Routes = [
   { path: 'dashboard', component: Dashboard },
 
   // Route for Todo
-  { path: 'todo', component: Todo }
+  { path: 'todo', component: Todo },
+  
+  // Route for Login
+  { path: 'login', component: Login }
 ];
 
 @NgModule({
