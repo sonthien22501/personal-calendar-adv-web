@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Dashboard } from './dashboard/dashboard';
 import { Todo } from './todo/todo';
 import { Login } from './login/login';
+import { ExternalData } from './external/external';
 
 const routes: Routes = [
   // Default redirect
@@ -17,7 +18,10 @@ const routes: Routes = [
   { path: 'todo', component: Todo },
   
   // Route for Login
-  { path: 'login', component: Login }
+  { path: 'login', component: Login },
+
+  // Route for External Data
+  { path: 'external', component: ExternalData }
 ];
 
 @NgModule({

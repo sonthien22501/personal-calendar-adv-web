@@ -1,0 +1,14 @@
+<div class="external-wrapper">
+  <h2>External API Data</h2>
+  <p>Fetching data from <code>jsonplaceholder.typicode.com</code></p>
+
+  <div *ngIf="isLoading">⏳ Loading data...</div>
+
+  <div *ngIf="!isLoading" class="posts-grid">
+    <div *ngFor="let p of posts" class="post-card">
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.body }}</p>
+      <small>ID: {{ p.id }}</small>
+    </div>
+  </div>
+</div>
